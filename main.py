@@ -69,7 +69,6 @@ def user_input() -> Union[list[int], list[list[int]]]:
                 .format(dice, sides,
                         mode_input[mode_numeric]))
         if confirmation.upper() != "QUIT":
-            # choice[0], choice[1], choice[2] = dice, sides, mode_numeric
             choice.append(dice)
             choice.append(mode_numeric)
             choice.extend(sides)
@@ -160,7 +159,7 @@ def number_inclusion(numbers: list[int]) -> list[int]:
     return numbers
 
 
-# def destruct(choice: tuple[list[int], list[int]]) -> list[int]:
+# def destruct(choice: tuple[list[int], list[int]]) -> list[int]:        # Need to refactor to new formats
 #     """Destructuring tuple and returning list"""
 #     destructured_choice: list[int] = []
 #     if len(choice[1]) < 1:
@@ -170,7 +169,7 @@ def number_inclusion(numbers: list[int]) -> list[int]:
 #     return destructured_choice
 
 
-def number_generator(dice: int, face: list[int], mode: int) -> list[int]:
+def number_generator(dice: int, face: list[int], mode: int) -> list[int]:      # Need to refactor to new formats
     """Populating list with random numbers"""
     result: list[int] = []
     if mode == 1:
@@ -192,7 +191,7 @@ def number_generator(dice: int, face: list[int], mode: int) -> list[int]:
     return result
 
 
-def roll_dice(dice: int, face: list[int], mode: int) -> list[int]:
+def roll_dice(dice: int, face: list[int], mode: int) -> list[int]:       # Need to refactor to new formats
     """Rolling the dice"""
     if mode == 3:
         return []
@@ -208,12 +207,12 @@ def roll_dice(dice: int, face: list[int], mode: int) -> list[int]:
     return all_dice
 
 
-def dice_animation(face: int) -> str:
+def dice_animation(face: int) -> str:           # Placeholder, not implemented yet
     """Printing animated dice roll"""
     return str(face)
 
 
-def replace_numbers_with_dice(face: int) -> str:
+def replace_numbers_with_dice(face: int) -> str:        # Placeholder, not implemented yet
     """Used to replace numbers with dice printed sideways"""
     return str(face)
 
@@ -228,7 +227,7 @@ def clear_terminal() -> None:
         system("clear")  # on Unix systems
 
 
-def run() -> None:
+def run() -> None:        # Need to refactor to new formats
     """Main function wrapping everything"""
     choice = user_input()
     print(choice)
